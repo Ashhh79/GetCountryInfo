@@ -1,50 +1,242 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+@import url("https://fonts.google.com/specimen/Nunito+Sans");
 
 *{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+
 }
-
-
-:root{
-    --primary-color:#22254b;
-    --seconday-color:#373b69;
-}
-
 body{
-    background-color: var(--primary-color);
-    font-family:monospace;
-    margin:0;
-    color:white;
+    width: 100%;
+    min-height: 100vh;
+    --bgColor:hsl(0,0%,98%);
+    --fontcolor:hsl(200,15%,8%);
+    font-family:"Nunito Sans" , sans-serif;
 }
 
-header{
-    padding: 1rem;
+.dark{
+    --bgColor:hsl(200,15%,8%);
+    --fontcolor:hsl(0,0%,98%);
+    background-color: var(--bgColor);
+    color: whitesmoke;
+    --countrybgColour:hsl(207,26%,17%);
+}
+
+.container{
+    width: 100%;
+    padding: 30px;
     display: flex;
-    justify-content: flex-end;
-    background-color: var(--seconday-color);
-    
+    justify-content: space-between;
 }
 
-.search{
-    background-color: transparent;
-    border: 2px solid var(--primary-color);
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    color: white;
-    font-family: inherit;
-    border-radius: 30px;
-    
+.container:nth-child(1){
+    box-shadow: 0 5px 5px rgba(0,0,0,0.3);
+    background:var(--countrybgColour);
 }
-.search:focus{
+
+button{
+    outline: none;
+    border: 0;
+    background: transparent;
+    color: var(--fontcolor);
+
+}
+
+.toggle{
+    font-size: 18px;
+    cursor: pointer;
+    color: var(--fontcolor);
+
+}
+
+.toggle i{
+    padding: 5px;
+}
+
+/*second container*/
+.form-control{
+    width: 400px;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.3);
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--countrybgColour);
+
+}
+
+.form-control input{
+    width: 100%;
+    padding: 17px 14px;
     outline: 0;
-    background-color: var(--primary-color);
+    border: 0;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    background: transparent;
+    color: var(--fontcolor);
 }
-.search::placeholder{
-    color: #7378c5;
+.form-control i{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
 }
 
-main{
+i{
+    cursor: pointer;
+}
+
+.dropDownCon{
+    width: 200px;
+    position: relative;
+    background: var(--countrybgColour);
+    border-radius: 10px;
+
+}
+.dropDown{
+    width: 100%;
+    padding: 17px 14px;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.3);
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
+    cursor: pointer;
+    font-size: 18px;
+    
+}
+.dropDown p{
+    letter-spacing: 0.5px;
+    font-size: 15px;
+}
+.drop{
+    position: absolute;
+    box-shadow:0 5px 5px rgba(0,0,0,0.3);
+    top: 4rem;
+    padding: 10px 14px;
+    width: 100%;
+    border-radius: 10px;
+    background: var(--bgColor);
+    cursor: pointer;
+    background: var(--countrybgColour);
+}
+.drop p{
+    margin: 5px 0;
+}
+
+
+.Countries{
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-gap: 20px;
+}
+.country{
+    min-height: 100px;
+    box-shadow:0 5px 5px rgba(0,0,0,0.3);
+    /*width: 300px;*/
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--countrybgColour);
+}
+.country-img{
+    height: 200px;
+}
+.country-img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.country-info{
+    padding: 15px;
+}
+.country-info h3{
+    padding:10px 0;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+.country-info{
+    letter-spacing: 1px;
+}
+.country-info p>strong{
+    font-weight: 600;
+    
+}
+
+/*for dropdown*/
+.showDropDown{
+    display: none;
+}
+
+.countryModal{
+    position:fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background:var(--bgColor);
+    padding: 30px;
+    scroll-behavior: unset;
+    
+}
+.back{
+    position:sticky;
+    top: 3rem;
+    left: 30px;
+    background: var(--countrybgColour);
+    box-shadow: 0 5px 5px rgba(252, 3, 3, 0.3);
+    padding: 20px;
+    border-radius: 10px 30px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    
+}
+.back i{
+    margin: 2px;
+}
+
+.modal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+
+}
+
+.leftModal{
+    width: 50%;
+
+}
+
+.leftModal img{
+    width: 100%;
+    height: 100%;
+    box-shadow: 10px 10px 10px rgba(252, 3, 3, 0.3);
+    object-fit: cover;
+    border-radius: 20px 40px;
+}
+
+.rightModal{
+    width: 50%;
+    margin-left: 50px;
+}
+
+.modalInfo{
+    display: flex;
+    justify-content: space-between;
+}
+
+.rightModal h1{
+    margin: 10px 0;
+    letter-spacing: 1px;
+    font-size: 45px;
+}
+.inner p{
+    letter-spacing: 1px;
+}
+
+.inner p>strong{
+    font-weight: 600;
+}
+.show{
+    display:none;
 }

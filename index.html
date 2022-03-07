@@ -1,64 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All Countries Info</title>
 </head>
+
 <body>
-    
-    <header>
-        
 
-        <form  id="form">
-            <input type="text" name="search" id="search" class="search" placeholder="Search">
-        </form>
-    </header>
-
-    <main id="main">
-        <div class="main-table">
-            <h2>All Countries</h2>
-            <table border="1px">
-                <tr>
-                    <th>SR No.</th>
-                    <th>Name</th>
-                    <th>Area (Sq KM)</th>
-                    <th>Flag</th>
-                </tr>
-                <tr>
-                    <td>1.</td>
-                    <td>India</td>
-                    <td>84515465</td>
-                    <td><img src="" alt="" srcset=""></td>
-                </tr>
-                <tr>
-                    <td>2.</td>
-                    <td>India</td>
-                    <td>84515465</td>
-                </tr>
-                <tr>
-                    <td>3.</td>
-                    <td>India</td>
-                    <td>84515465</td>
-                </tr>
-                <tr>
-                    <td>4.</td>
-                    <td>India</td>
-                    <td>84515465</td>
-                </tr>
-            </table>
+    <div class="container">
+        <h1>Where ever you search!</h1>
+        <button class="toggle"><i class="far fa-moon moon"></i>Dark Mode</button>
+    </div>
+    <div class="container">
+        <div class="form-control">
+            <input type="text" placeholder="Search a Country" class="search">
+            <i class="fas fa-search search"></i>
         </div>
-    </main>
+        <div class="dropDownCon">
+            <div class="dropDown">
+                <p>Filter by region..</p>
+                <button><i class="fas fa-chevron-down"></i></button>
+            </div>
+            <div class="drop showDropDown">
+                <p class="region">All</p>
+                <p class="region">Asia</p>
+                <p class="region">Africa</p>
+                <p class="region">America</p>
+                <p class="region">Europe</p>
+                <p class="region">Oceania</p>
+            </div>
+        </div>
 
+    </div>
+    <div class="Countries">
 
-    
+    </div>
 
-
+    <div class="countryModal show">
+        <button class="back"><i class="fa-solid fa-arrow-left"></i> Back</button>
+        <div class="modal">
+            <div class="leftModal">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_the_Taliban.svg" alt="">
+            </div>
+            <div class="rightModal">
+                <h1>Germany</h1>
+                <div class="modalInfo">
+                    <div class="innerleft inner">
+                        <p><strong>Native Name:</strong>${data.population}</p>
+                        <p><strong>population:</strong>${data.region}</p>
+                        <p><strong>Region:</strong>${data.capital}</p>
+                        <p><strong>Sub-region:</strong>1515487</p>
+                    </div>
+                    <div class="innerright inner">
+                        <p><strong>Capital:</strong>${data.population}</p>
+                        <p><strong>Top Level Domain:</strong>${data.region}</p>
+                        <p><strong>Currency:</strong>${data.capital}</p>
+                        <p><strong>Languages:</strong>1515487</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <footer>
         <h3>Created by - <a href="https://www.instagram.com/___ashhh____79/">Akash Kushwaha</a></h3>
     </footer>
-    <script src="script.js"></script>
+    <script src="index.js"></script>
 </body>
+
 </html>
