@@ -1,6 +1,7 @@
 # GetCountryInfo
 
-Hello Everyone! MySelf Akash Kushwaha, 
+Hello Everyone! 
+Myelf Akash Kushwaha, 
 I'm a Student of BSc Computer Science and I am in the final year.
 
 This is the coding challenge given by DeepThought Edutech Ventures Private Limited
